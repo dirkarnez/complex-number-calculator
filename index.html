@@ -14,36 +14,7 @@
  	  <textarea id="textarea_input" rows="10" placeholder="Once upon a time..."></textarea>
     <button id="btn_submit">Submit</button>
     <script type="text/javascript">
-     	const textareaInput = document.getElementById("textarea_input");
-        const checkboxNewline = document.getElementById("checkbox_newline");
-        
-        const getPyodidePromise = (() => {
-        	let pyodide;
-            
-            return () => new Promise(res => {
-            	if (!!pyodide) {
-                	console.log("already");
-                	res(pyodide);
-                } else {
-                	loadPyodide().then(_pyodide => {
-                    	console.log(`just now ${!!pyodide ? "overriding..." : "new"}`);
-                    	pyodide = _pyodide;
-                        
-                        res(pyodide);
-                    })
-                }
-            })
-        })();
-        
-        document.getElementById("btn_submit").addEventListener("click", function() {
-        	  getPyodidePromise().then(pyodide => {
-              pyodide.runPython(textareaInput.value);
-            })
-        });
-        
-        
-    	const code = `
-        # Alternative way how can complex no can initialize
+      const code = `# Alternative way how can complex no can initialize
 # importing "cmath" for complex number operations
 import cmath
 
@@ -72,7 +43,34 @@ w = cmath.rect(1.4142135623730951, 0.7853981633974483)
 # printing rectangular form of complex number
 print ("The rectangular form of complex number is : ",end="")
 print (w)
-`
+`;
+     	  const textareaInput = document.getElementById("textarea_input");
+        textareaInput.value = code;
+        const checkboxNewline = document.getElementById("checkbox_newline");
+        
+        const getPyodidePromise = (() => {
+        	let pyodide;
+            
+            return () => new Promise(res => {
+            	if (!!pyodide) {
+                	console.log("already");
+                	res(pyodide);
+                } else {
+                	loadPyodide().then(_pyodide => {
+                    	console.log(`just now ${!!pyodide ? "overriding..." : "new"}`);
+                    	pyodide = _pyodide;
+                        
+                        res(pyodide);
+                    })
+                }
+            })
+        })();
+        
+        document.getElementById("btn_submit").addEventListener("click", function() {
+        	  getPyodidePromise().then(pyodide => {
+              pyodide.runPython(textareaInput.value);
+            })
+        });
     </script>
   </body>
 </html>
