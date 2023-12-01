@@ -59,7 +59,10 @@ print (w)
                 	console.log("already");
                 	res(pyodide);
                 } else {
-                  loadPyodide()
+                  loadPyodide({
+                    fullStdLib: true,
+                    stdout: (msg) => consoleOutput.innerHTML = `${msg}`),
+                  })
                   .then(_pyodide => {
                     console.log(`just now ${!!pyodide ? "overriding..." : "new"}`);
                     pyodide = _pyodide;
@@ -73,7 +76,7 @@ print (w)
             consoleOutput.innerHTML = "";
         	  getPyodidePromise()
             .then(pyodide => {
-              consoleOutput.innerHTML = pyodide.runPython(textareaInput.value);
+              pyodide.runPython(textareaInput.value);
             })
         });
     </script>
