@@ -61,7 +61,7 @@ print (w)
                 } else {
                   loadPyodide({
                     fullStdLib: true,
-                    stdout: (msg) => consoleOutput.innerHTML = `${msg}`),
+                    stdout: msg => consoleOutput.innerHTML = `${msg}`,
                   })
                   .then(_pyodide => {
                     console.log(`just now ${!!pyodide ? "overriding..." : "new"}`);
