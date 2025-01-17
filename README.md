@@ -8,4 +8,4 @@
 - [Standards Mapping - Common Core Math | Khan Academy](https://www.khanacademy.org/standards/CCSS.Math/HSN.CN#HSN.CN.A.3)
 - !!!!!!!!!![Lecture 21: Three-Phase Systems, Part 1 - YouTube](https://www.youtube.com/watch?v=Ih92AK1D-2M)
   - &t=615
-
+- [量子力學會用虛數複數 Imaginary number, Complex number Masterclass【量乜子外傳】｜廣東話科普 - YouTube](https://www.youtube.com/watch?v=SCbQFKDF3Kg)
