@@ -21,8 +21,15 @@ export class ComplexNumber {
     }
 
     setExponentialForm(amplitude, phaseInRadian) {
-        this.#real = amplitude * Math.cos(phaseInRadian)
-        this.#imaginery = amplitude * Math.sin(phaseInRadian);
+        if (typeof phaseInRadian == typeof "")
+        {
+            // leave room for symbolic calculation: (-)n * pi = 3.5
+        } 
+        else if (!Number.isNaN(phaseInRadian)) 
+        {
+            this.#real = (phaseInRadian == (0.5 * Math.PI) || phaseInRadian == (-0.5 * Math.PI)) ? 0 : amplitude * Math.cos(phaseInRadian);
+            this.#imaginery = amplitude * Math.sin(phaseInRadian);
+        }
     }
 
     conjugate() { 
