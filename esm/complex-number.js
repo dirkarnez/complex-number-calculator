@@ -1,10 +1,10 @@
 export class ComplexNumber {
-    #real = 0;
-    #imaginery = 0;
+    real = 0;
+    imaginery = 0;
 
     setRectangularForm(real, imaginery) {
-        this.#real = real;
-        this.#imaginery = imaginery;
+        this.real = real;
+        this.imaginery = imaginery;
     }
 
     #degreeToRadian(degree) {
@@ -16,8 +16,8 @@ export class ComplexNumber {
     }
 
     setPolarForm(amplitude, phaseInDegree) {
-        this.#real = amplitude * Math.cos(this.#degreeToRadian(phaseInDegree))
-        this.#imaginery = amplitude * Math.sin(this.#degreeToRadian(phaseInDegree));
+        this.real = amplitude * Math.cos(this.#degreeToRadian(phaseInDegree))
+        this.imaginery = amplitude * Math.sin(this.#degreeToRadian(phaseInDegree));
     }
 
     setExponentialForm(amplitude, phaseInRadian) {
@@ -27,23 +27,35 @@ export class ComplexNumber {
         } 
         else if (!Number.isNaN(phaseInRadian)) 
         {
-            this.#real = (phaseInRadian == (0.5 * Math.PI) || phaseInRadian == (-0.5 * Math.PI)) ? 0 : amplitude * Math.cos(phaseInRadian);
-            this.#imaginery = amplitude * Math.sin(phaseInRadian);
+            this.real = (phaseInRadian == (0.5 * Math.PI) || phaseInRadian == (-0.5 * Math.PI)) ? 0 : amplitude * Math.cos(phaseInRadian);
+            this.imaginery = amplitude * Math.sin(phaseInRadian);
         }
     }
 
     conjugate() { 
         var conjugateComplexNumber = new ComplexNumber();
-        conjugateComplexNumber.setRectangularForm(this.#real, 0 - this.#imaginery);
+        conjugateComplexNumber.setRectangularForm(this.real, 0 - this.imaginery);
         return conjugateComplexNumber;
     }
 
+    add(anotherComplexNumber) {
+        var sumComplexNumber = new ComplexNumber();
+        sumComplexNumber.setRectangularForm(this.real + anotherComplexNumber.real, this.imaginery + anotherComplexNumber.imaginery);
+        return sumComplexNumber;
+    }
+
+    substract(anotherComplexNumber) {
+        var sumComplexNumber = new ComplexNumber();
+        sumComplexNumber.setRectangularForm(this.real - anotherComplexNumber.real, this.imaginery - anotherComplexNumber.imaginery);
+        return sumComplexNumber;
+    }
+
     absoluteValue() {
-        return Math.sqrt(Math.pow(this.#real, 2) + Math.pow(this.#imaginery, 2))
+        return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginery, 2))
     }
 
     phaseInRadian() {
-        return Math.atan(this.#imaginery / this.#real);
+        return Math.atan(this.imaginery / this.real);
     }
 
     phaseInDegree() {
@@ -60,7 +72,7 @@ export class ComplexNumber {
     }
 
     convertToRectangularForm() {
-        return `${this.#real} ${this.#imaginery > 0 ? `+ ${this.#imaginery}` : `- ${this.#imaginery * (-1)}`}j`;
+        return `${this.real} ${this.imaginery > 0 ? `+ ${this.imaginery}` : `- ${this.imaginery * (-1)}`}j`;
     }
 
 

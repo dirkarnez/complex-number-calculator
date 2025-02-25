@@ -49,6 +49,37 @@
       console.log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
       console.log(`=============exponential with PI form end=================`);
     }
+
+    {
+      console.log(`=============addition start=================`);
+      const a = new ComplexNumber();
+      a.setRectangularForm(3, 7);
+
+      const b = new ComplexNumber();
+      b.setRectangularForm(8, 11);
+      const c = a.add(b);
+
+      // console.log(`poler form: ${c.convertToPolarForm()}`);
+      // console.log(`exponential form: ${c.convertToExponentialForm()}`);
+      console.log(`rectangular form: ${c.convertToRectangularForm()}`); //11 + 18i
+      console.log(`=============addition end=================`);
+    }
+
+    {
+      console.log(`=============subtraction start=================`);
+      const a = new ComplexNumber();
+      a.setRectangularForm(7, 9);
+
+      const b = new ComplexNumber();
+      b.setRectangularForm(3, 4);
+
+      const c = a.substract(b);
+
+      // console.log(`poler form: ${c.convertToPolarForm()}`);
+      // console.log(`exponential form: ${c.convertToExponentialForm()}`);
+      console.log(`rectangular form: ${c.convertToRectangularForm()}`); // 4 + 5i
+      console.log(`=============subtraction end=================`);
+    }
   </script>
 </body>
 
