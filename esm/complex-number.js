@@ -54,6 +54,10 @@ export class ComplexNumber {
         return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginery, 2))
     }
 
+    amplitude() {
+        return this.absoluteValue();
+    }
+
     phaseInRadian() {
         return Math.atan(this.imaginery / this.real);
     }
@@ -63,7 +67,7 @@ export class ComplexNumber {
     }
 
     convertToPolarForm() {
-        return `${this.absoluteValue()} ∠ ${this.phaseInDegree()})`
+        return `${this.absoluteValue()} ∠ ${this.phaseInDegree()}°`
     }
 
     // When using exponential form you should ensure that all angles are measured in radians and not degrees.
@@ -74,7 +78,6 @@ export class ComplexNumber {
     convertToRectangularForm() {
         return `${this.real} ${this.imaginery > 0 ? `+ ${this.imaginery}` : `- ${this.imaginery * (-1)}`}j`;
     }
-
 
     toString() {
         return this.convertToRectangularForm();
