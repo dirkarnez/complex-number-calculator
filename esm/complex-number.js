@@ -72,6 +72,12 @@ export class ComplexNumber {
         return sumComplexNumber;
     }
 
+    multiplyWithScalar(scalar) {
+        var productComplexNumber = new ComplexNumber();
+        productComplexNumber.setRectangularForm(this.real * scalar, this.imaginery * scalar);
+        return productComplexNumber;
+    }
+
     absoluteValue() {
         return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginery, 2))
     }
