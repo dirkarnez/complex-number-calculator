@@ -36,11 +36,11 @@ export class ComplexNumber {
         // const index = phaseWithPIInRadian >= 0 ? (phaseWithPIInRadian / 0.5) % 4 : ((phaseWithPIInRadian/0.5) % 4) + 4;
         const indexReal = (((phaseWithPIInRadian/0.5) % 4) + 4) % 4;
         const lookupReal = [1, 0, -1, 0][indexReal];
-        this.real = amplitude * (!!lookupReal ? lookupReal : Math.cos(phaseWithPIInRadian * Math.PI));
+        this.real = amplitude * ((indexReal >= 0 && indexReal <=4) ? lookupReal : Math.cos(phaseWithPIInRadian * Math.PI));
 
         const indexImaginery =  (((phaseWithPIInRadian/0.5) % 4) + 4) % 4;
         const lookupImaginery = [0, 1, 0, 0][indexImaginery];
-        this.imaginery = amplitude * (!!indexImaginery ? indexImaginery : Math.sin(phaseWithPIInRadian * Math.PI));
+        this.imaginery = amplitude * ((indexImaginery >= 0 && indexImaginery <=4) ? lookupImaginery : Math.sin(phaseWithPIInRadian * Math.PI));
     }
 
     conjugate() { 
