@@ -39,7 +39,7 @@ export class ComplexNumber {
         this.real = amplitude * ((indexReal >= 0 && indexReal < 4) ? lookupReal : Math.cos(phaseWithPIInRadian * Math.PI));
 
         const indexImaginery =  (((phaseWithPIInRadian/0.5) % 4) + 4) % 4;
-        const lookupImaginery = [0, 1, 0, 0][indexImaginery];
+        const lookupImaginery = [0, 1, 0, -1][indexImaginery];
         this.imaginery = amplitude * ((indexImaginery >= 0 && indexImaginery < 4) ? lookupImaginery : Math.sin(phaseWithPIInRadian * Math.PI));
     }
 
