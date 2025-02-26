@@ -89,12 +89,12 @@ export class ComplexNumber {
     }
 
     convertToPolarForm() {
-        return `${this.absoluteValue()} ∠ ${this.phaseInDegree()}°`
+        return `${this.humanReadable(this.absoluteValue())} ∠ ${this.phaseInDegree()}°`
     }
 
     // When using exponential form you should ensure that all angles are measured in radians and not degrees.
     convertToExponentialForm() {
-        return `${this.absoluteValue()} * e^(j * ${this.phaseInRadian()})`
+        return `${this.humanReadable(this.absoluteValue())} * e^(j * ${this.phaseInRadian()})`
     }
 
     humanReadable(num) {
