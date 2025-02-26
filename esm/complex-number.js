@@ -79,7 +79,7 @@ export class ComplexNumber {
     }
 
     absoluteValue() {
-        return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginery, 2))
+        return this.humanReadable(Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginery, 2)));
     }
 
     amplitude() {
