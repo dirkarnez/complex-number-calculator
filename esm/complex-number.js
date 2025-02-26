@@ -102,7 +102,7 @@ export class ComplexNumber {
     }
 
     convertToRectangularForm() {
-        return `${humanReadable(this.real)} ${this.imaginery >= 0 ? `+ ${humanReadable(this.imaginery)}` : `- ${humanReadable(this.imaginery * (-1))}`}j`;
+        return `${this.humanReadable(this.real)} ${this.imaginery >= 0 ? `+ ${this.humanReadable(this.imaginery)}` : `- ${this.humanReadable(this.imaginery * (-1))}`}j`;
     }
 
     toString() {
