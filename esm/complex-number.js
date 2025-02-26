@@ -98,7 +98,7 @@ export class ComplexNumber {
     }
 
     humanReadable(num) {
-        return num < 0.001 ? 0 : num;
+        return (num < 0.001 && num > -0.001) ? 0 : num;
     }
 
     convertToRectangularForm() {
