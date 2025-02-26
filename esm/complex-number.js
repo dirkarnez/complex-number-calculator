@@ -34,13 +34,24 @@ export class ComplexNumber {
 
     setExponentialFormWithPI(amplitude, phaseWithPIInRadian) { 
         // const index = phaseWithPIInRadian >= 0 ? (phaseWithPIInRadian / 0.5) % 4 : ((phaseWithPIInRadian/0.5) % 4) + 4;
-        const indexReal = (((phaseWithPIInRadian/0.5) % 4) + 4) % 4;
-        const lookupReal = [1, 0, -1, 0][indexReal];
-        this.real = amplitude * ((indexReal >= 0 && indexReal < 4) ? lookupReal : Math.cos(phaseWithPIInRadian * Math.PI));
+        let steps = phaseWithPIInRadian/0.5;
+        const isLookupable = Number.isInteger(steps);
 
-        const indexImaginery =  (((phaseWithPIInRadian/0.5) % 4) + 4) % 4;
-        const lookupImaginery = [0, 1, 0, -1][indexImaginery];
-        this.imaginery = amplitude * ((indexImaginery >= 0 && indexImaginery < 4) ? lookupImaginery : Math.sin(phaseWithPIInRadian * Math.PI));
+        if (isLookupable) {
+            steps = Number.parseInt(steps);
+            
+            const indexReal = ((steps % 4) + 4) % 4;
+            const lookupReal = [1, 0, -1, 0][indexReal];
+
+            const indexImaginery =  (((steps) % 4) + 4) % 4;
+            const lookupImaginery = [0, 1, 0, -1][indexImaginery];
+
+            this.real = amplitude * lookupReal;
+            this.imaginery = amplitude * lookupImaginery;
+        } else {
+            this.real = amplitude * Math.cos(phaseWithPIInRadian * Math.PI);
+            this.imaginery = amplitude * Math.sin(phaseWithPIInRadian * Math.PI);
+        }
     }
 
     conjugate() { 
