@@ -97,8 +97,12 @@ export class ComplexNumber {
         return `${this.absoluteValue()} * e^(j * ${this.phaseInRadian()})`
     }
 
+    humanReadable(num) {
+        return num < 0.001 ? 0 : num;
+    }
+
     convertToRectangularForm() {
-        return `${this.real} ${this.imaginery >= 0 ? `+ ${this.imaginery}` : `- ${this.imaginery * (-1)}`}j`;
+        return `${humanReadable(this.real)} ${this.imaginery >= 0 ? `+ ${humanReadable(this.imaginery)}` : `- ${humanReadable(this.imaginery * (-1))}`}j`;
     }
 
     toString() {
