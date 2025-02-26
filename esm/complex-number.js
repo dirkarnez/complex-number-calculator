@@ -87,7 +87,7 @@ export class ComplexNumber {
     }
 
     convertToRectangularForm() {
-        return `${this.real} ${this.imaginery > 0 ? `+ ${this.imaginery}` : `- ${this.imaginery * (-1)}`}j`;
+        return `${this.real} ${this.imaginery >= 0 ? `+ ${this.imaginery}` : `- ${this.imaginery * (-1)}`}j`;
     }
 
     toString() {
