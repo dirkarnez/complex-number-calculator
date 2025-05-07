@@ -8,11 +8,11 @@ export class ComplexNumber {
     }
 
     #degreeToRadian(degree) {
-        return degree / (180 / Math.PI);
+        return Number(degree / (180 / Math.PI)).toFixed(3);
     }
 
     #radianToDegree(radian) {
-        return radian * (180 / Math.PI);
+        return Number(radian * (180 / Math.PI)).toFixed(3);
     }
 
     setPolarForm(amplitude, phaseInDegree) {
