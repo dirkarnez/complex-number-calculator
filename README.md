@@ -9,6 +9,11 @@
 - !!!!!!!!!![Lecture 21: Three-Phase Systems, Part 1 - YouTube](https://www.youtube.com/watch?v=Ih92AK1D-2M)
   - &t=615
 - [量子力學會用虛數複數 Imaginary number, Complex number Masterclass【量乜子外傳】｜廣東話科普 - YouTube](https://www.youtube.com/watch?v=SCbQFKDF3Kg)
+- https://stanford.edu/~boyd/ee102/complex-primer.pdf
+- https://www.electronics-tutorials.ws/accircuits/complex-numbers.html
+- https://eepower.com/power-electronics-textbook/vol-i-electrical-power-systems-design/chapter-2-analysis-ac-systems/complex-numbers-phasors-and-phase-shift/#
+- https://gubner.ece.wisc.edu/notes/MagnitudeAndPhaseOfComplexNumbers.pdf
+- https://www.mathworks.com/help/comm/ref/complexphaseshift.html
 
 ### Ready to use
 - [matplotlib.online | Create online plots with python and matplotlib](https://matplotlib.online/project?id=0)
