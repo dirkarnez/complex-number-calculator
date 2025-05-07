@@ -87,11 +87,11 @@ export class ComplexNumber {
     }
 
     phaseInRadian() {
-        return Math.atan(this.imaginery / this.real);
+        return Number(Math.atan(this.imaginery / this.real)).toFixed(3);
     }
 
     phaseInDegree() {
-        return this.#radianToDegree(this.phaseInRadian())
+        return Number(this.#radianToDegree(this.phaseInRadian())).toFixed(3);
     }
 
     convertToPolarForm() {
