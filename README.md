@@ -19,30 +19,8 @@
 - [matplotlib.online | Create online plots with python and matplotlib](https://matplotlib.online/project?id=0)
 
 ### TODOs
-- [ ] phase difference
-```javascript
-function phaseDifference(polar1, polar2) {
-  // polar1 and polar2 are objects with properties r (magnitude) and theta (angle in radians)
-  
-  const theta1 = polar1.theta; // Phase angle of the first complex number
-  const theta2 = polar2.theta; // Phase angle of the second complex number
-  
-  // Calculate phase difference
-  const deltaTheta = theta2 - theta1;
-  
-  // Normalize the phase difference to be within -π to π
-  const normalizedDeltaTheta = ((deltaTheta + Math.PI) % (2 * Math.PI)) - Math.PI;
-  
-  return normalizedDeltaTheta;
-}
-
-// Example usage:
-const complex1 = { r: 5, theta: Math.PI / 4 }; // r = 5, θ = 45 degrees
-const complex2 = { r: 3, theta: Math.PI / 2 }; // r = 3, θ = 90 degrees
-
-const difference = phaseDifference(complex1, complex2);
-console.log(`Phase Difference: ${difference} radians`);
-```
-      
-
+- [x] phase difference
+- [ ] do not calculate `Math.PI`
+- [ ] express as `sin(2 * pi + theta)` / `cos(2 * pi + theta)` 
 - [ ] convert to time axis
+- [ ] limit the range (mod 2 * pi)
