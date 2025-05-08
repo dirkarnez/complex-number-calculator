@@ -108,6 +108,10 @@ export class ComplexNumber {
         return Number(Number((num < 0.001 && num > -0.001) ? 0 : num).toPrecision(3));
     }
 
+    phaseDifference(complexNumberB) {
+        return Number(this.phaseInDegree() - complexNumberB.phaseInDegree()).toPrecision(3);
+    }
+
     convertToRectangularForm() {
         return `${this.humanReadable(this.real)} ${this.humanReadable(this.imaginery) >= 0 ? `+ ${this.humanReadable(this.imaginery)}` : `- ${this.humanReadable(this.imaginery * (-1))}`}j`;
     }
