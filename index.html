@@ -89,7 +89,7 @@
       const b = new ComplexNumber();
       b.setRectangularForm(0, 1); // sine wave
 
-      console.log(`phase of ${a.convertToPolarForm()} - phase of ${b.convertToPolarForm()}: ${a.phaseDifference(b)}`); // 4 + 5i
+      console.log(`phase of ${a.convertToPolarForm()} - phase of ${b.convertToPolarForm()}: ${ComplexNumber.phaseDifference(a, b)}`); // 4 + 5i
       console.log(`=============phase difference end=================`);
     }
   </script>
