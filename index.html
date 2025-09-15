@@ -15,47 +15,47 @@
     import { ComplexNumber } from "./esm/complex-number.js";
 
     {
-      console.log(`=============rectangular form start=================`);
+      log(`=============rectangular form start=================`);
       const complexNumber = new ComplexNumber();
       complexNumber.setRectangularForm(16, 51);
-      console.log(`poler form: ${complexNumber.convertToPolarForm()}`);
-      console.log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
-      console.log(`=============rectangular form end=================`);
+      log(`poler form: ${complexNumber.convertToPolarForm()}`);
+      log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
+      log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
+      log(`=============rectangular form end=================`);
     }
 
     {
-      console.log(`=============exponential form start=================`);
+      log(`=============exponential form start=================`);
       const complexNumber = new ComplexNumber();
       complexNumber.setExponentialForm(40, 0.95);
-      console.log(`poler form: ${complexNumber.convertToPolarForm()}`);
-      console.log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
-      console.log(`=============exponential form end=================`);
+      log(`poler form: ${complexNumber.convertToPolarForm()}`);
+      log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
+      log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
+      log(`=============exponential form end=================`);
     }
 
     {
-      console.log(`=============polar form start=================`);
+      log(`=============polar form start=================`);
       const complexNumber = new ComplexNumber();
       complexNumber.setPolarForm(6, 30);
-      console.log(`poler form: ${complexNumber.convertToPolarForm()}`);
-      console.log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
-      console.log(`=============polar form end=================`);
+      log(`poler form: ${complexNumber.convertToPolarForm()}`);
+      log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
+      log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
+      log(`=============polar form end=================`);
     }
 
     {
-      console.log(`=============****exponential with PI form start*****=================`);
+      log(`=============****exponential with PI form start*****=================`);
       const complexNumber = new ComplexNumber();
       complexNumber.setExponentialForm(2, (-1 * 2 * Math.PI * 1) / 4);
-      console.log(`poler form: ${complexNumber.convertToPolarForm()}`);
-      console.log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
-      console.log(`=============exponential with PI form end=================`);
+      log(`poler form: ${complexNumber.convertToPolarForm()}`);
+      log(`exponential form: ${complexNumber.convertToExponentialForm()}`);
+      log(`rectangular form: ${complexNumber.convertToRectangularForm()}`);
+      log(`=============exponential with PI form end=================`);
     }
 
     {
-      console.log(`=============addition start=================`);
+      log(`=============addition start=================`);
       const a = new ComplexNumber();
       a.setRectangularForm(3, 7);
 
@@ -63,14 +63,14 @@
       b.setRectangularForm(8, 11);
       const c = a.add(b);
 
-      // console.log(`poler form: ${c.convertToPolarForm()}`);
-      // console.log(`exponential form: ${c.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${c.convertToRectangularForm()}`); //11 + 18i
-      console.log(`=============addition end=================`);
+      // log(`poler form: ${c.convertToPolarForm()}`);
+      // log(`exponential form: ${c.convertToExponentialForm()}`);
+      log(`rectangular form: ${c.convertToRectangularForm()}`); //11 + 18i
+      log(`=============addition end=================`);
     }
 
     {
-      console.log(`=============subtraction start=================`);
+      log(`=============subtraction start=================`);
       const a = new ComplexNumber();
       a.setRectangularForm(7, 9);
 
@@ -79,22 +79,22 @@
 
       const c = a.substract(b);
 
-      // console.log(`poler form: ${c.convertToPolarForm()}`);
-      // console.log(`exponential form: ${c.convertToExponentialForm()}`);
-      console.log(`rectangular form: ${c.convertToRectangularForm()}`); // 4 + 5i
-      console.log(`=============subtraction end=================`);
+      // log(`poler form: ${c.convertToPolarForm()}`);
+      // log(`exponential form: ${c.convertToExponentialForm()}`);
+      log(`rectangular form: ${c.convertToRectangularForm()}`); // 4 + 5i
+      log(`=============subtraction end=================`);
     }
 
     {
-      console.log(`=============phase difference start=================`);
+      log(`=============phase difference start=================`);
       const a = new ComplexNumber();
       a.setRectangularForm(1, 0); // cos wave
 
       const b = new ComplexNumber();
       b.setRectangularForm(0, 1); // sine wave
 
-      console.log(`phase of ${a.convertToPolarForm()} - phase of ${b.convertToPolarForm()}: ${ComplexNumber.phaseDifference(a, b)}`); // 4 + 5i
-      console.log(`=============phase difference end=================`);
+      log(`phase of ${a.convertToPolarForm()} - phase of ${b.convertToPolarForm()}: ${ComplexNumber.phaseDifference(a, b)}`); // 4 + 5i
+      log(`=============phase difference end=================`);
     }
   </script>
 </body>
