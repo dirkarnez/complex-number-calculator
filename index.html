@@ -7,7 +7,11 @@
 </head>
 
 <body>
+  <div id="container"></div>
   <script type="module">
+    const div = document.getElementById("container");
+    const log = str => div.innerHTML += `${str}<br>`;
+    
     import { ComplexNumber } from "./esm/complex-number.js";
 
     {
