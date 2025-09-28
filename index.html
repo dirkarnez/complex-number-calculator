@@ -93,7 +93,7 @@
       const b = new ComplexNumber();
       b.setRectangularForm(0, 1); // sine wave
 
-      log(`phase of ${a.convertToPolarForm()} - phase of ${b.convertToPolarForm()}: ${ComplexNumber.phaseDifference(a, b)}`); // 4 + 5i
+      log(`phase of ${a.toString()}: ${a.convertToPolarForm()} - phase of ${b.toString()}: ${b.convertToPolarForm()}. ${ComplexNumber.phaseDifference(a, b)}`); // 4 + 5i
       log(`=============phase difference end=================`);
     }
   </script>
