@@ -105,7 +105,7 @@ export class ComplexNumber {
     
     // When using exponential form you should ensure that all angles are measured in radians and not degrees.
     convertToExponentialForm() {
-        return `${this.humanReadable(this.absoluteValue())} * e^(j * ${this.phaseInRadian()})`
+        return `${this.humanReadable(this.absoluteValue())} * e^(j * ${this.phaseInRadian()} rad)`
     }
 
     humanReadable(num) {
