@@ -3,10 +3,10 @@ export class ComplexNumber {
     imaginery = 0;
 
     // Rectangular form by default for one-liner
-    constructor(real, imaginery) {
+    constructor(real = 0, imaginery = 0) {
         this.setRectangularForm(real, imaginery);
     }
-    
+        
     setRectangularForm(real, imaginery) {
         this.real = real;
         this.imaginery = imaginery;
